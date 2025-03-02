@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(/lily-banse--YHSwy6uqvk-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+  z-index: -1;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: aliceblue;
+}
+.navbar p {
+  font-size: 25px;
+}
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Playwrite IT Moderna";
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.nav-logo img {
+  width: 90px;
+  border: none;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.nav-link {
+  display: flex;
+  /* justify-content: center; */
+  font-family: "Playwrite IT Moderna";
+}
+.link {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  color: orange;
+  list-style: none;
+}
+.link a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.nav-link a span {
+  font-size: 30px; /* Adjust icon size if needed */
+}
+
+.link a:hover {
+  color: orange;
+}
+.main-content {
+  padding-top: 10%;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-weight: 40px;
+  padding-left: 30px;
+}
+h1 {
+  font-size: 40px; /* Changed from 30px to 40px */
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  align-items: center;
+  font-family: "Playwrite IT Moderna", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.main-content p {
+  color: rgb(241, 231, 231);
+  padding: 10px;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+}
+span {
+  font-family: "Dancing Script";
+  font-size: 40px;
+  font-weight: 600;
+  font-style: normal;
+  color: orange;
+}
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 15px;
+  margin-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: "Playwrite IT Moderna", serif;
+  font-weight: 700;
+  font-style: normal;
+  border-radius: 30px 10px;
+}
+
+button:hover {
+  background-color: #edd8b8;
+}
