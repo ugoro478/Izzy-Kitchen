@@ -6,8 +6,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  /* font-family: Arial, sans-serif; */
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
   background-image: url(/lily-banse--YHSwy6uqvk-unsplash.jpg);
   background-size: cover;
   background-position: center;
@@ -15,16 +18,16 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  position: relative;
 }
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
-  z-index: -1;
+  z-index: 1;
 }
 .navbar {
   display: flex;
@@ -33,6 +36,10 @@ body {
   width: 100%;
   padding: 5px 5%;
   flex-wrap: wrap;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; */
 }
 .navbar p {
   font-size: 20px;
@@ -86,6 +93,8 @@ body {
   font-family: Verdana, Tahoma, sans-serif;
   font-weight: 40px;
   padding-left: 30px;
+  position: relative;
+  z-index: 2;
 }
 h1 {
   font-size: 40px; /* Changed from 30px to 40px */
@@ -198,5 +207,119 @@ button:hover {
       font-size: 16px;
       padding: 10px 15px;
     }
+  }
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.about-content h1 {
+  color: orange;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.about-content {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: oblique;
+  font-size: 1.2rem;
+  max-width: 500px;
+  /* line-height: 1.6rem; */
+}
+.about-content ul {
+  list-style: none;
+}
+.about-image {
+  max-width: 100%;
+}
+.about-image img {
+  width: 100%; /* Added !important to override inline styles */
+  max-width: 500px;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.Contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(88, 92, 76);
+  padding: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.Contact h2 {
+  color: orange;
+  font-size: 30px;
+  text-align: center;
+}
+.Contact p {
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Dancing Script", serif;
+  /* text-align: center; */
+  /* padding: 5px; */
+  margin-bottom: 10px;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column; /* or row */
+  align-items: center; /* or center */
+  justify-content: space-around;
+  padding: 20px;
+  /* background-color: white; */
+  width: 90%;
+  max-width: 500px;
+  /* height: 100hv; */
+  border-radius: 30px;
+}
+
+.form input,
+.form textarea {
+  padding: 10px;
+  margin: 10px;
+  border: 4px solid orange;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 1rem;
+  font-family: "Dancing Script";
+
+  /* background-color: rgb(88, 92, 76); */
+}
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .Contact {
+    flex-direction: column;
+  }
+
+  .form {
+    width: 100%;
+    max-width: 400px;
   }
 }
